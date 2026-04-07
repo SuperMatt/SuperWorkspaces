@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Closed Tab Groups</title>
+    <link rel="stylesheet" href="sidebar.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="app-header">
+        <h1>Closed Tab Groups</h1>
+        <button id="refresh-button" type="button">Refresh</button>
+      </header>
+
+      <section class="controls">
+        <label for="target-mode">Restore into</label>
+        <select id="target-mode">
+          <option value="new-window">New window (default)</option>
+          <option value="current-window">Current window</option>
+        </select>
+      </section>
+
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+      <ul id="groups-list" class="groups-list"></ul>
+    </main>
+
+    <script src="sidebar.js"></script>
+  </body>
+</html>

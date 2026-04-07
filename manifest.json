@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Quick Tab Groups",
+  "version": "0.1.0",
+  "description": "Restore recently closed tab groups from a Firefox sidebar.",
+  "permissions": [
+    "sessions",
+    "tabs",
+    "windows",
+    "storage"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "sidebar_action": {
+    "default_title": "Closed Tab Groups",
+    "default_panel": "sidebar.html"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "quick-tab-groups@matthew.local",
+      "strict_min_version": "128.0"
+    }
+  }
+}
