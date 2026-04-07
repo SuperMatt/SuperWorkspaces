@@ -5,40 +5,97 @@
 
 body {
   margin: 0;
+  background: color-mix(in srgb, canvas 95%, black 5%);
 }
 
 .app {
-  padding: 12px;
+  max-width: 620px;
+  margin: 16px auto;
+  padding: 16px;
+  border: 1px solid color-mix(in srgb, currentColor 15%, transparent);
+  border-radius: 12px;
+  background: canvas;
+  box-shadow: 0 8px 24px color-mix(in srgb, currentColor 12%, transparent);
 }
 
 .app-header {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  gap: 8px;
+  gap: 10px;
+}
+
+.controls-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
 }
 
 .app-header h1 {
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.12rem;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.badge {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 0.92rem;
+  border: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+  background: color-mix(in srgb, canvas 90%, currentColor 10%);
+}
+
+.subtle {
+  margin: 1px 0 0;
+  font-size: 0.86rem;
+  opacity: 0.78;
 }
 
 .controls {
-  margin-top: 12px;
+  margin-top: 10px;
   display: grid;
   gap: 6px;
 }
 
+.row {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.hint {
+  margin: 0;
+  font-size: 0.86rem;
+  opacity: 0.8;
+}
+
 .controls select,
-.app-header button,
+.controls input,
 .restore-button {
   font: inherit;
 }
 
+.restore-button {
+  padding: 7px 10px;
+  border-radius: 8px;
+  border: 1px solid color-mix(in srgb, currentColor 20%, transparent);
+  background: color-mix(in srgb, canvas 86%, currentColor 14%);
+}
+
 .status {
   min-height: 1.25rem;
-  margin: 10px 0;
-  font-size: 0.9rem;
+  margin: 10px 0 6px;
+  font-size: 0.85rem;
+  opacity: 0.86;
 }
 
 .groups-list {
@@ -50,21 +107,36 @@ body {
 }
 
 .group-item {
-  border: 1px solid color-mix(in srgb, currentColor 18%, transparent);
-  border-radius: 6px;
-  padding: 8px;
+  border: 1px solid color-mix(in srgb, currentColor 16%, transparent);
+  border-radius: 10px;
+  padding: 10px;
   display: grid;
   gap: 8px;
+  background: color-mix(in srgb, canvas 90%, currentColor 10%);
 }
 
 .group-title {
   margin: 0;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.97rem;
 }
 
 .group-meta {
   margin: 0;
   font-size: 0.8rem;
   opacity: 0.85;
+}
+
+.workspace-pages {
+  margin: 0;
+  padding-left: 16px;
+  font-size: 0.82rem;
+  display: grid;
+  gap: 4px;
+}
+
+.workspace-pages li {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
