@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "SuperWorkspaces",
+  "version": "0.1.0",
+  "description": "Manage workspaces from a Firefox sidebar.",
+  "permissions": [
+    "sessions",
+    "tabs",
+    "tabGroups",
+    "storage",
+    "alarms",
+    "menus"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "sidebar_action": {
+    "default_title": "SuperWorkspaces",
+    "default_panel": "sidebar.html"
+  },
+  "action": {
+    "default_title": "SuperWorkspaces",
+    "default_popup": "sidebar.html"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "quick-tab-groups@matthew.local",
+      "strict_min_version": "128.0"
+    }
+  }
+}

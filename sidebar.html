@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SuperWorkspaces</title>
+    <link rel="stylesheet" href="sidebar.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="app-header">
+        <div class="hero">
+          <div class="badge">W</div>
+          <div>
+            <h1>SuperWorkspaces</h1>
+            <p class="subtle">Open, review, and manage saved workspace windows.</p>
+          </div>
+        </div>
+      </header>
+
+      <section class="controls">
+        <div class="controls-actions">
+          <button id="new-workspace-button" class="restore-button" type="button">New Workspace</button>
+          <button id="refresh-button" class="restore-button" type="button">Refresh</button>
+        </div>
+        <p class="hint">Create workspaces from tabs using tab right-click menu: "Move to new workspace".</p>
+      </section>
+
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+      <ul id="workspaces-list" class="groups-list"></ul>
+    </main>
+
+    <script src="sidebar.js"></script>
+  </body>
+</html>

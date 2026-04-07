@@ -1,0 +1,70 @@
+:root {
+  color-scheme: light dark;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.app {
+  padding: 12px;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.controls {
+  margin-top: 12px;
+  display: grid;
+  gap: 6px;
+}
+
+.controls select,
+.app-header button,
+.restore-button {
+  font: inherit;
+}
+
+.status {
+  min-height: 1.25rem;
+  margin: 10px 0;
+  font-size: 0.9rem;
+}
+
+.groups-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.group-item {
+  border: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+  border-radius: 6px;
+  padding: 8px;
+  display: grid;
+  gap: 8px;
+}
+
+.group-title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.group-meta {
+  margin: 0;
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
