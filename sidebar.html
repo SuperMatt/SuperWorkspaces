@@ -3,26 +3,31 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Closed Tab Groups</title>
+    <title>SuperWorkspaces</title>
     <link rel="stylesheet" href="sidebar.css" />
   </head>
   <body>
     <main class="app">
       <header class="app-header">
-        <h1>Closed Tab Groups</h1>
-        <button id="refresh-button" type="button">Refresh</button>
+        <div class="hero">
+          <div class="badge">W</div>
+          <div>
+            <h1>SuperWorkspaces</h1>
+            <p class="subtle">Open, review, and manage saved workspace windows.</p>
+          </div>
+        </div>
       </header>
 
       <section class="controls">
-        <label for="target-mode">Restore into</label>
-        <select id="target-mode">
-          <option value="new-window">New window (default)</option>
-          <option value="current-window">Current window</option>
-        </select>
+        <div class="controls-actions">
+          <button id="new-workspace-button" class="restore-button" type="button">New Workspace</button>
+          <button id="refresh-button" class="restore-button" type="button">Refresh</button>
+        </div>
+        <p class="hint">Create workspaces from tabs using tab right-click menu: "Move to new workspace".</p>
       </section>
 
       <p id="status" class="status" role="status" aria-live="polite"></p>
-      <ul id="groups-list" class="groups-list"></ul>
+      <ul id="workspaces-list" class="groups-list"></ul>
     </main>
 
     <script src="sidebar.js"></script>

@@ -1,13 +1,15 @@
 {
   "manifest_version": 3,
-  "name": "Quick Tab Groups",
+  "name": "SuperWorkspaces",
   "version": "0.1.0",
-  "description": "Restore recently closed tab groups from a Firefox sidebar.",
+  "description": "Manage workspaces from a Firefox sidebar.",
   "permissions": [
     "sessions",
     "tabs",
-    "windows",
-    "storage"
+    "tabGroups",
+    "storage",
+    "alarms",
+    "menus"
   ],
   "background": {
     "scripts": [
@@ -15,8 +17,12 @@
     ]
   },
   "sidebar_action": {
-    "default_title": "Closed Tab Groups",
+    "default_title": "SuperWorkspaces",
     "default_panel": "sidebar.html"
+  },
+  "action": {
+    "default_title": "SuperWorkspaces",
+    "default_popup": "sidebar.html"
   },
   "browser_specific_settings": {
     "gecko": {
